@@ -1,0 +1,15 @@
+
+.page-heading{
+    width: 100%;
+    padding: 15rem 0 ;
+    color: $white;
+    background: url('../media/products-heading.jpg') no-repeat;
+    @extend .middel ;
+    h1{
+        margin-top: 2rem;
+    }
+    h2{
+        font-weight: 700;
+        color: $primary;
+    }
+}

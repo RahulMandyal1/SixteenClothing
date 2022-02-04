@@ -1,0 +1,130 @@
+@media screen and (max-width :768px) {
+
+    html{
+        font-size: 55%;
+    }
+    h1
+    {
+        font-size: 4rem;
+    
+    }
+    figure{
+        width: 100% !important;
+        img{
+            width: 100% !important;
+            object-fit: cover;
+        }
+    }
+    section{
+        padding:4rem 2rem;
+    }
+    .grid-2-col{
+        grid-template-columns: 1fr;
+    }
+    .grid-3-col{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid-4-col{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+    // navigation  bar start here 
+    .header{
+        padding: 0;
+        nav{
+            width: 100%;
+            height: 100%;
+        }
+        .logo{
+            margin: 2rem;
+        }
+        .icon{
+            margin: 2rem;
+            i{
+                font-size: 2rem;
+                color: $white;
+            }
+        }
+        .black-btn{
+            color:$dark;
+        }
+        .show-navigation{
+            display: inline-block;
+        }
+        .menu-list{
+            position: absolute;
+            top: 100%;
+            flex-flow: column wrap;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            justify-content: flex-start;
+            display: none;
+            li{
+                text-align: center;
+            }
+            & a{
+                margin: 4rem 0;
+            }
+        }
+        .show-menu{
+            background:linear-gradient(to right, rgba(86,105,229,.9),rgba(241,58,81,4));
+            display: inline-block;
+            z-index: 1;
+            a{
+                color: $white;
+                font-size: 1.5rem;
+                &:hover{
+                    transition: all .1s ease-out;
+                    color: $primary;
+                }
+            }
+        }
+      
+    }
+    // contact page section start here 
+    #our-location {
+        .introductry-text{
+            grid-column: span 2;
+        }
+    }
+
+    // footer section start here 
+    footer {
+        padding: 3rem 2rem;
+    }
+
+   
+}
+
+@media screen and (max-width:480px){
+
+    .hero{
+        max-height: 60vh;
+        h1{
+            padding: 0 3rem;        
+            text-align: center;
+       
+        }
+    }
+    h1{
+        font-size: 3rem;
+        letter-spacing: .2rem;
+    }
+    .grid-3-col{
+        grid-template-columns: 1fr;
+    }
+    .grid-4-col{
+        grid-template-columns: 1fr;
+
+    }
+    .header{
+        .logo
+        {
+            a{
+                font-size: 2.2rem;
+            }
+        }
+    }
+}

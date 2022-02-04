@@ -1,0 +1,39 @@
+.about-bannar{
+    background: url('../media/about-heading.jpg') no-repeat;
+}
+
+// team member section start here 
+#our-team{
+
+    h2{
+        padding: 0 0 2rem 0 ;
+        border-bottom:$border; 
+    }
+}
+
+// team members section ends here 
+
+.teamcard-container{
+    margin-top: 2rem;
+    @extend .grid-3-col;
+    gap: 2rem;
+    .card{
+    
+        @extend .middel;
+        h4{
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: $tertiary;
+            margin: 3rem 0  1rem 0;
+        }
+        span{
+            font-size: 1.2rem;
+            color: $primary;
+            margin-bottom: 1rem;
+        }
+        p{
+            padding: 0 3rem 3rem 3rem;
+        }
+
+    }
+}

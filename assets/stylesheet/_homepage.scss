@@ -1,0 +1,339 @@
+// Common classes  used in the whole project
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.middel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.grid-2-col{
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-3-col{
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-4-col{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.row-center{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.logo a{
+    color: $white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    span{
+        color: $primary;
+    }
+}
+
+section{
+    padding: 4% 11%;
+}
+h2{
+    font-size: 2.5rem;
+}
+h1{
+    font:{
+        size:5rem;
+        weight:700;
+    }
+}
+h1{
+    letter-spacing: .8rem;
+    color: $white;
+    margin-top: 1.6rem;
+}
+// Common classes ends here 
+
+
+// header start here 
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:$lightdark;
+    padding: 2rem 11%;
+    z-index: 1000;
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.2);
+    transition: all 1s ease-out ;
+    nav{
+        @extend .flex;
+    }
+    ul{
+        @extend .flex;
+        list-style-type: none;
+    }
+    // hiding the hamburg menus  
+    .show-navigation{
+        display: none;
+    }  
+}
+
+.menu-list li a {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: all 0.3s ease;
+}
+
+  // on scroll header changes 
+  .sticky{
+    background: $white;
+    .logo{
+        a{
+            color: $dark;
+        }
+    }
+    ul{
+        a{
+            color: $dark;
+        }
+    }
+}
+
+// header ends here 
+
+// hero section start here 
+.hero{
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('../media/slide_01.jpg');
+    background-size:cover;
+    @extend .middel;
+    h2{
+        text-align: center;
+        font-weight: 500;
+        color: $primary;
+    }
+}
+// hero section ends here 
+
+// product section start here 
+
+.product-filter{
+    width: 100%;
+    @extend .row-center;
+    padding: 2rem 0 ;
+    border-bottom: $border;
+    button{
+        border: none;
+        font:{
+            size: 1.3rem;
+            weight:700;
+            color:$dark;
+        }
+        text-transform: uppercase;
+        background: none;
+        margin-left: 3.2rem;
+        transition: .1s ease-out;
+        &:hover{
+            color: $primary;
+        }
+    }
+
+}
+
+
+// products cards start here 
+.cards-container{
+   @extend .grid-3-col;
+    gap: 2rem;
+    margin: 2rem 0 ;
+}
+.card{
+  
+    font-size: 1.4rem;
+    border: $border;
+    .product-image{
+        width: 100% !important;
+        & img{
+            width: 100% !important;
+        }
+    }
+    
+    h2{
+        font-size: 1.7rem;
+        color: $tertiary;
+        cursor: pointer;
+        &:hover{
+            color: $primary;
+        }
+    }
+    .price{
+        font-weight: 500;
+    }
+    .title-price{
+        @extend .flex;
+        margin-bottom: 2rem;
+    }
+    p{
+        margin-bottom: 2rem;
+    }
+    .product-review{
+        @extend .flex;
+        i{
+            color: $primary;
+        }
+    }
+    .review-count{
+        a{
+            &::before{
+                content:  "Review(";
+            }
+            &::after{
+                content :")";
+            }
+        }
+    }
+}
+.card-info{
+    padding: 3rem;
+}
+.review-count{
+    a{
+        color: $primary;
+        font-weight: 600;
+    }
+}
+
+.pagination-container{
+    width: 100%;
+    margin-top: 2rem;
+    @extend .row-center;
+    li{
+        margin-left: 1.6rem;
+        border: $border;
+
+    }
+    a{
+    padding: 1rem 1.5rem;
+     font-weight: 600;
+     color: $dark;
+    }
+    .active{
+        background: $primary;
+        color: $white;
+    }
+}
+// product  cards ends here 
+
+
+// product section ends here 
+
+// About section start here  
+
+.about{
+h2{
+    padding-bottom: 2rem;
+    border-bottom:$border;
+}
+.container{
+    @extend .grid-2-col;
+    gap: 2rem;
+    margin: 2rem 0 ;
+}
+}
+.introductry-text{
+    h4{
+        color: $tertiary;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .description{
+        margin-bottom: 2rem;
+    }
+    ul{
+        list-style-type: square;
+        list-style-position: inside;
+        li{
+            margin-bottom:1rem;
+        }
+        a{
+            font-size: 1.4rem;
+            color: $dark;
+        }
+    }
+}
+
+// About section ends here 
+
+// footer section start here 
+footer{
+    width: 100%;
+    padding: 4% 11%;
+    background-color: $dark;
+    .container{
+        @extend .grid-4-col;
+        gap: 4rem;
+    }
+    .col{
+        .logo{
+            margin-bottom: 2rem;
+            a{
+                font-size: 2rem;
+            }
+        }
+        p{
+            font-size: 1.2rem;
+            padding: 0 1rem  0 0 ;
+            color: $white;
+        }
+    }
+    h3{
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: $white;
+    }
+    ul{
+        a{
+            font-size: 1.2rem;
+            color: $white;
+            margin-bottom: 1rem;
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+    .col-4 ul{
+        @extend .flex;
+        justify-content: flex-start;
+        color: $white;
+        li{
+            margin-right: 1rem;
+        }
+    }
+}
+// copyright section start here 
+.copyright-container{
+    color: #fff;
+    margin-top: 4rem;
+    width: 100%;
+    text-align:center;
+    border-top:$border;
+    padding: 2rem  0 ;
+    a{
+        color: $primary;
+        font-weight: 600;
+    }
+}
+// Copyright section ends here 
+// footer section ends here 

@@ -1,0 +1,29 @@
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all .1s ease-in-out;
+    outline: none;border: none;
+    text-decoration: none;
+}
+
+html{
+    font-size:62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Poppins',sans-serif;
+}
+p{
+    line-height: 2.4rem;
+   font:{
+       size: 1.4rem;
+       color: $lightdark;
+   }
+}
+a{
+    display: inline-block;
+}
+
+// all colors pallete 
